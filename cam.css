@@ -1,0 +1,28 @@
+body {
+  background-color: #cccccc;
+}
+* {
+  animation: skel 0.25s infinite;
+}
+
+@keyframes skel{
+  0%{
+    cursor: url("assets/skel/frame_0_delay-0.01s.png"), auto;
+  }
+  20%{
+    cursor: url("assets/skel/frame_1_delay-0.01s.png"), auto;
+  }
+  40%{
+    cursor: url("assets/skel/frame_2_delay-0.01s.png"), auto;
+  }
+  60%{
+    cursor: url("assets/skel/frame_3_delay-0.01s.png"), auto;
+  }
+  80%{
+    cursor: url("assets/skel/frame_4_delay-0.01s.png"), auto;
+
+  }
+  100%{
+    cursor: url("assets/skel/frame_0_delay-0.01s.png"), auto;
+  }
+}

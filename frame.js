@@ -79,7 +79,7 @@ function setup() {
 
   ctxw = wb.drawingContext;
 
-  block[0] = new Block("/camtest.html", 150, 150, 200, 200);
+  block[0] = new Block("/wobble.html", 150, 150, 200, 200, "");
   // block[1] = new Block("bg.html", 120, 10, 100, 100);
   block[1] = new Block("/wobble.html", 10, 225, 75, 50, "Wobble");
   block[2] = new Block("bg.html", 415, 225, 75, 50, "bg");

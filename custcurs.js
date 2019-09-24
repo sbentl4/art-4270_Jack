@@ -5,8 +5,9 @@ function custcurs (curimg){
   if (curimg.constructor == Array)
 {
   // console.log("dog");
-  if(tracker > curimg.length)
+  if(tracker > curimg.length - 1)
   tracker = 0;
+  // console.log(tracker);
   curtxt = curimg[tracker] + ", auto";
   tracker++;
   }else {

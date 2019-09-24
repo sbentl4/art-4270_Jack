@@ -28,7 +28,6 @@ var flip = true;
 // let eyeZ = ((600/2.0) / tan(PI60.0/360.0));
 
 let block = [];
-let handy = false;
 // let canvas;
 
 let wb;
@@ -44,21 +43,46 @@ let globe;
 
 // let bgc;
 // let curs = "url('assets/corg.png')"
+let handy = false;
+let handys = false;
 let crg = "url('assets/corg.png')";
 let skel = [];
 let ywc = [];
-let tracker = 0;
+let skel2 = [];
+let tracks = 0;
+let tracks2 = 0;
 let ywt = 0;
 ywc[0] = "url('assets/yw/y1.png')";
 ywc[1] = "url('assets/yw/y2.png')";
 ywc[2] = "url('assets/yw/y3.png')";
 ywc[3] = "url('assets/yw/y4.png')";
 ywc[4] = "url('assets/yw/y5.png')";
+
 skel[0] = "url('assets/skel/s0.png')";
 skel[1] = "url('assets/skel/s1.png')";
 skel[2] = "url('assets/skel/s2.png')";
 skel[3] = "url('assets/skel/s3.png')";
 skel[4] = "url('assets/skel/s4.png')";
+
+skel2[0] = "url('assets/skel2/s1.png')";
+skel2[1] = "url('assets/skel2/s2.png')";
+skel2[2] = "url('assets/skel2/s3.png')";
+skel2[3] = "url('assets/skel2/s4.png')";
+skel2[4] = "url('assets/skel2/s5.png')";
+skel2[5] = "url('assets/skel2/s6.png')";
+skel2[6] = "url('assets/skel2/s7.png')";
+skel2[7] = "url('assets/skel2/s8.png')";
+skel2[8] = "url('assets/skel2/s9.png')";
+skel2[9] = "url('assets/skel2/s10.png')";
+skel2[10] = "url('assets/skel2/s11.png')";
+skel2[11] = "url('assets/skel2/s12.png')";
+skel2[12] = "url('assets/skel2/s13.png')";
+skel2[13] = "url('assets/skel2/s14.png')";
+skel2[14] = "url('assets/skel2/s15.png')";
+skel2[15] = "url('assets/skel2/s16.png')";
+skel2[16] = "url('assets/skel2/s17.png')";
+
+
 
 
 
@@ -116,6 +140,7 @@ function setup() {
   // console.log(pg);
 }
 function draw() {
+  // let handys = false;
   clear();
   wobb(imgw, wb);
   // wobb(imgs, strs);
@@ -159,12 +184,13 @@ function draw() {
 
   // noCursor();
   // custcurs("url(assets/yw/y1.png)");
-  custcurs(skel);
+
   // custcurs(skel[ywt]);
   // ywt++;
   // if(ywt > ywc.length)
   // ywt = 0;
 
+  // custcurs(skel, tracks);
 
   moveadjust();
   // text('x1: ' + x1, 100, 100);
@@ -174,16 +200,21 @@ function draw() {
     // block[i].display();
     block[i].show();
     if (handys == true)
-    custcurs(ywc);
-      // handy = true;
+    {
+      handy = true;
+      // tracks2 = custcurs(skel2, tracks2);
+    }
   }//end for
-  // if (handy == true)
-  // {
-  //
-  // }
-  // cursor('assets/corg.png');
-  // element.style.cursor="help";
-    // document.getElementById("defaultCanvas0").style.cursor = "cell";
+
+  if (handy == true){
+    // console.log("handy true");
+    tracks2 = custcurs(skel2, tracks2);
+    handy = false;
+  } else {
+    // console.log("handy false");
+    tracks = custcurs(skel, tracks);
+  }
+
 }//end draw
 
 function wglfunc(){

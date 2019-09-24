@@ -43,6 +43,21 @@ let imgt;
 let globe;
 
 // let bgc;
+// let curs = "url('assets/corg.png')"
+let crg = "url('assets/corg.png')";
+let skel = [];
+let ywc = [];
+let ywt = 0;
+ywc[0] = "url('assets/yw/y1.png')";
+ywc[1] = "url('assets/yw/y2.png')";
+ywc[2] = "url('assets/yw/y3.png')";
+ywc[3] = "url('assets/yw/y4.png')";
+ywc[4] = "url('assets/yw/y5.png')";
+skel[0] = "url('assets/skel/s0.png')";
+skel[1] = "url('assets/skel/s1.png')";
+skel[2] = "url('assets/skel/s2.png')";
+skel[3] = "url('assets/skel/s3.png')";
+skel[4] = "url('assets/skel/s4.png')";
 
 
 
@@ -139,15 +154,16 @@ function draw() {
   wglfunc();
   globe.parent('canvas-test');
   globe.style.color = "red";
-  // globe.position(50, 50);
-  // image(globe);
-  // corg.position(mouseX + 185, mouseY + 25);
-  // image(globe, mouseX, mouseY);
-  //
-  // testmouse();
-  handy = false;
-  noCursor();
-  // cursor(ARROW);
+
+
+  // noCursor();
+  // custcurs("url(assets/yw/y1.png)");
+  custcurs(skel[ywt]);
+  ywt++;
+  if(ywt > ywc.length)
+  ywt = 0;
+
+
   moveadjust();
   // text('x1: ' + x1, 100, 100);
   for (var i = 0; i < block.length; i++) {
@@ -156,12 +172,16 @@ function draw() {
     // block[i].display();
     block[i].show();
     if (handys == true)
-      handy = true;
+    custcurs(crg);
+      // handy = true;
   }//end for
-  if (handy == true)
-  cursor(HAND);
-  // rect(100, 100 + movy, 10, 10);
-  // image(pg, 500, 500);
+  // if (handy == true)
+  // {
+  //
+  // }
+  // cursor('assets/corg.png');
+  // element.style.cursor="help";
+    // document.getElementById("defaultCanvas0").style.cursor = "cell";
 }//end draw
 
 function wglfunc(){

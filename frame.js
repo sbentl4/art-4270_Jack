@@ -47,6 +47,7 @@ let globe;
 let crg = "url('assets/corg.png')";
 let skel = [];
 let ywc = [];
+let tracker = 0;
 let ywt = 0;
 ywc[0] = "url('assets/yw/y1.png')";
 ywc[1] = "url('assets/yw/y2.png')";
@@ -158,10 +159,11 @@ function draw() {
 
   // noCursor();
   // custcurs("url(assets/yw/y1.png)");
-  custcurs(skel[ywt]);
-  ywt++;
-  if(ywt > ywc.length)
-  ywt = 0;
+  custcurs(skel);
+  // custcurs(skel[ywt]);
+  // ywt++;
+  // if(ywt > ywc.length)
+  // ywt = 0;
 
 
   moveadjust();
@@ -172,7 +174,7 @@ function draw() {
     // block[i].display();
     block[i].show();
     if (handys == true)
-    custcurs(crg);
+    custcurs(ywc);
       // handy = true;
   }//end for
   // if (handy == true)

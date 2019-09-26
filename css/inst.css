@@ -1,0 +1,16 @@
+canvas {
+  display : block;
+  width : 280px;
+  height : 210px;
+  margin : auto;
+  padding : 0;
+  border : none;
+  /* background-color : black; */
+}
+body {
+  background-image: url('/assets/sea.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100%;
+  /* width: 100%; */
+}

@@ -99,23 +99,10 @@ function preload(){
   // globe.hide();
 }
 function setup() {
+  frameRate(60);
   // console.log(imgs);
   wb = createGraphics(canx, cany);
   // strs = createGraphics(imgs.width, imgs.height);
-
-  // strs = createGraphics(imgs.width * 3, imgs.height * 3);
-  // for (var i = 0; i < 3; i++) {
-  //   // console.log(i);
-  //     for (var j = 0; j < 3; j++) {
-  //       strs.image(imgs, imgs.width * i, imgs.width * j);
-  //
-  //     }
-  //   // strs.image(imgs, 0, imgs.width * i);
-  //   // strs.image(imgs, imgs.height * i, imgs.width * i);
-  // }//end for
-  // // strs.save('stars.png')
-  // imgt = createImg(strs);
-  //
 
   ctxw = wb.drawingContext;
 
@@ -288,7 +275,7 @@ function wglbg(){
 
   wgl.push();
   wgl.tint(wgl.t1, wgl.t3, wgl.t2);
-  wgl.translate(0,160, 0);
+  wgl.translate(0,180, 0);
   wgl.texture(cat);
   wgl.box(400, 70, 170);
   wgl.pop();

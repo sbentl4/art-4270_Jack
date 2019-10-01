@@ -1,7 +1,7 @@
 canvas {
   display : block;
-  width : 280px;
-  height : 210px;
+  /* width : 280px; */
+  /* height : 210px; */
   margin : auto;
   padding : 0;
   border : none;
@@ -9,8 +9,15 @@ canvas {
 }
 body {
   background-image: url('/assets/sea.jpg');
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: auto;
-  height: 100%;
+  /* height: 100%; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   /* width: 100%; */
+}
+.canvas-div {
+  width: 100%;
+  height: 100%;
 }

@@ -10,6 +10,8 @@ function preload(){
  function setup(){
    // tiler(mb, 10, 'marble');
  }
+
+ //==================================================
 //unsure if the stuff above may be problematic later
 let sketcht = function(bg){
   let wW = bg.windowWidth;
@@ -65,5 +67,10 @@ let sketch = function(background){
     wobb(background.marble, background);
   };
 };
+
+//===============================================
+
+//===============================================
+
 let testcanv = new p5(sketcht);
 let fullbg = new p5(sketch);

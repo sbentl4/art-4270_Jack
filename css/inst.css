@@ -8,7 +8,7 @@ canvas {
   /* background-color : black; */
 }
 body {
-  background-image: url('assets/sea.jpg');
+  background-image: url('../assets/sea.jpg');
   /* background-repeat: no-repeat; */
   background-size: auto;
   /* height: 100%; */

@@ -61,7 +61,7 @@ let back = function(background){
     for (var i = 0; i < boxi; i++) {
 
       for (var j = 0; j < boxj; j++) {
-        boxes[boxes.length++] = new boxcube(boxs, (i * boxs), (j * boxs), background);
+        boxes[boxes.length++] = new boxcube(boxs, ((i * boxs) + (boxi * -.5 * boxs)), ((j * boxs + (boxj * -.5 * boxs))), background);
         // console.log("i: " + i * 10 + ", j: " + j * 10);
       }
     }

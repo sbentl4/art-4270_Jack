@@ -1,0 +1,20 @@
+{
+  "name": "hellonode",
+  "version": "1.0.0",
+  "description": "first test",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "sockets",
+    "test"
+  ],
+  "author": "Jack Bentley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
